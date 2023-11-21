@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <template id="contact-card">
+        <div class="contact-card">
+            <img src="" alt="image">
+            <h3></h3>
+            <p></p>
+            <p></p>
+        </div>
+    </template>
+
+
+    <script>
+        const template = document.getElementById('contact-card');
+
+        const contact1 = template.content.cloneNode(true);
+        const contact2 = template.content.cloneNode(true);
+
+        contact1.querySelector('img').src = 'https://html5css.ru/howto/img_avatar2.png';
+        contact1.querySelector('h3').textContent = 'Великанова Дарья';
+        contact1.querySelectorAll('p')[0].textContent = 'regul@mail.ru';
+        contact1.querySelectorAll('p')[1].textContent = '8-988-569-87-67';
+
+        contact2.querySelector('img').src = 'https://html5css.ru/howto/img_avatar.png';
+        contact2.querySelector('h3').textContent = 'Иванов Алексей';
+        contact2.querySelectorAll('p')[0].textContent = 'alex213@mail.ru';
+        contact2.querySelectorAll('p')[1].textContent = '8-956-345-65-45';
+
+        document.body.appendChild(contact1);
+        document.body.appendChild(contact2);
+
+    </script>
+</body>
+
+</html>
